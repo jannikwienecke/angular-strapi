@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spezial_komponentes",
+  "info": {
+    "singularName": "spezial-komponente",
+    "pluralName": "spezial-komponentes",
+    "displayName": "Spezial Komponente"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

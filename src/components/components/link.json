@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_components_links",
+  "info": {
+    "displayName": "Link",
+    "icon": "link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Link": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::seite.seite"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_components_hauptteils",
+  "info": {
+    "displayName": "Hauptteil",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Zusammenfassung": {
+      "type": "text"
+    },
+    "Standardkomponente": {
+      "displayName": "Standardkomponente",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.standardkomponente"
+    },
+    "spezial_komponentes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::spezial-komponente.spezial-komponente"
+    }
+  }
+}

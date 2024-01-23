@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_components_standardkomponentes",
+  "info": {
+    "displayName": "Standardkomponente"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "text"
+    },
+    "Bild": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Untertitlel": {
+      "type": "string"
+    }
+  }
+}

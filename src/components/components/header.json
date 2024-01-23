@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_header_headers",
+  "info": {
+    "displayName": "Header",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Zusammenfassung": {
+      "type": "text"
+    },
+    "Bild": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Link": {
+      "displayName": "Link",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.link"
+    }
+  }
+}
