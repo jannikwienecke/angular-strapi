@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "managements",
+  "info": {
+    "singularName": "management",
+    "pluralName": "managements",
+    "displayName": "Management",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Position": {
+      "type": "string"
+    },
+    "Telefon": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "string"
+    },
+    "Bild": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

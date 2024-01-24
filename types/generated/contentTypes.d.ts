@@ -768,6 +768,43 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiKarriereBenefitKarriereBenefit
+  extends Schema.CollectionType {
+  collectionName: 'karriere_benefits';
+  info: {
+    singularName: 'karriere-benefit';
+    pluralName: 'karriere-benefits';
+    displayName: 'Karriere Benefit';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Titel: Attribute.String;
+    Beschreibung: Attribute.Text;
+    Bild: Attribute.Media;
+    KarriereAuflistungVorteile: Attribute.Component<
+      'components.karriere-vorteile-auflistung',
+      true
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::karriere-benefit.karriere-benefit',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::karriere-benefit.karriere-benefit',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiKategorieKategorie extends Schema.CollectionType {
   collectionName: 'kategories';
   info: {
@@ -800,6 +837,41 @@ export interface ApiKategorieKategorie extends Schema.CollectionType {
   };
 }
 
+export interface ApiManagementManagement extends Schema.CollectionType {
+  collectionName: 'managements';
+  info: {
+    singularName: 'management';
+    pluralName: 'managements';
+    displayName: 'Management';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Name: Attribute.String;
+    Position: Attribute.String;
+    Telefon: Attribute.String;
+    Email: Attribute.String;
+    Bild: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::management.management',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::management.management',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSeiteSeite extends Schema.CollectionType {
   collectionName: 'seites';
   info: {
@@ -812,7 +884,7 @@ export interface ApiSeiteSeite extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    Header: Attribute.Component<'components.header'>;
+    Kopfzeile: Attribute.Component<'components.header'>;
     Name: Attribute.String;
     Hauptteil: Attribute.Component<'components.hauptteil'>;
     Kategorie: Attribute.Relation<
@@ -844,7 +916,8 @@ export interface ApiSpezialKomponenteSpezialKomponente
   info: {
     singularName: 'spezial-komponente';
     pluralName: 'spezial-komponentes';
-    displayName: 'Spezial Komponente';
+    displayName: 'Statische Komponente';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -887,7 +960,9 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::karriere-benefit.karriere-benefit': ApiKarriereBenefitKarriereBenefit;
       'api::kategorie.kategorie': ApiKategorieKategorie;
+      'api::management.management': ApiManagementManagement;
       'api::seite.seite': ApiSeiteSeite;
       'api::spezial-komponente.spezial-komponente': ApiSpezialKomponenteSpezialKomponente;
     }

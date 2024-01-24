@@ -15,10 +15,22 @@
       "repeatable": true,
       "component": "components.standardkomponente"
     },
-    "spezial_komponentes": {
+    "Statische_Komponente": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::spezial-komponente.spezial-komponente"
+    },
+    "AdBanner": {
+      "displayName": "Add Banner",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.add-banner"
+    },
+    "AdBannerMitBild": {
+      "displayName": "Add Banner mit Bild",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.add-banner-mit-bild"
     }
   }
 }

@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Header": {
+    "Kopfzeile": {
       "displayName": "Header",
       "type": "component",
       "repeatable": false,

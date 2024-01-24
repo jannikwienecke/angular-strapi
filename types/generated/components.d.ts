@@ -1,5 +1,39 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface ComponentsAddBannerMitBild extends Schema.Component {
+  collectionName: 'components_components_add_banner_mit_bilds';
+  info: {
+    displayName: 'Add Banner mit Bild';
+  };
+  attributes: {
+    Titel: Attribute.String;
+    HintergrundBild: Attribute.Media;
+    seite: Attribute.Relation<
+      'components.add-banner-mit-bild',
+      'oneToOne',
+      'api::seite.seite'
+    >;
+  };
+}
+
+export interface ComponentsAddBanner extends Schema.Component {
+  collectionName: 'components_components_add_banners';
+  info: {
+    displayName: 'Add Banner';
+    description: '';
+  };
+  attributes: {
+    Title: Attribute.String;
+    Untertitel: Attribute.String;
+    link: Attribute.Relation<
+      'components.add-banner',
+      'oneToOne',
+      'api::seite.seite'
+    >;
+    LinkText: Attribute.String;
+  };
+}
+
 export interface ComponentsFooter extends Schema.Component {
   collectionName: 'components_components_footers';
   info: {
@@ -20,10 +54,15 @@ export interface ComponentsHauptteil extends Schema.Component {
       'components.standardkomponente',
       true
     >;
-    spezial_komponentes: Attribute.Relation<
+    Statische_Komponente: Attribute.Relation<
       'components.hauptteil',
       'oneToMany',
       'api::spezial-komponente.spezial-komponente'
+    >;
+    AdBanner: Attribute.Component<'components.add-banner', true>;
+    AdBannerMitBild: Attribute.Component<
+      'components.add-banner-mit-bild',
+      true
     >;
   };
 }
@@ -39,6 +78,16 @@ export interface ComponentsHeader extends Schema.Component {
     Zusammenfassung: Attribute.Text;
     Bild: Attribute.Media;
     Link: Attribute.Component<'components.link', true>;
+  };
+}
+
+export interface ComponentsKarriereVorteileAuflistung extends Schema.Component {
+  collectionName: 'components_components_karriere_vorteile_auflistungs';
+  info: {
+    displayName: 'Karriere Vorteile Auflistung';
+  };
+  attributes: {
+    Vorteil: Attribute.String;
   };
 }
 
@@ -71,9 +120,12 @@ export interface ComponentsStandardkomponente extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'components.add-banner-mit-bild': ComponentsAddBannerMitBild;
+      'components.add-banner': ComponentsAddBanner;
       'components.footer': ComponentsFooter;
       'components.hauptteil': ComponentsHauptteil;
       'components.header': ComponentsHeader;
+      'components.karriere-vorteile-auflistung': ComponentsKarriereVorteileAuflistung;
       'components.link': ComponentsLink;
       'components.standardkomponente': ComponentsStandardkomponente;
     }

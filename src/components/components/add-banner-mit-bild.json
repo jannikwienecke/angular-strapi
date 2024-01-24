@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_components_add_banner_mit_bilds",
+  "info": {
+    "displayName": "Add Banner mit Bild"
+  },
+  "options": {},
+  "attributes": {
+    "Titel": {
+      "type": "string"
+    },
+    "HintergrundBild": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "seite": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::seite.seite"
+    }
+  }
+}

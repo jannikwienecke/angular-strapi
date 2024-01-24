@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_components_add_banners",
+  "info": {
+    "displayName": "Add Banner",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Untertitel": {
+      "type": "string"
+    },
+    "link": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::seite.seite"
+    },
+    "LinkText": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_components_karriere_vorteile_auflistungs",
+  "info": {
+    "displayName": "Karriere Vorteile Auflistung"
+  },
+  "options": {},
+  "attributes": {
+    "Vorteil": {
+      "type": "string"
+    }
+  }
+}

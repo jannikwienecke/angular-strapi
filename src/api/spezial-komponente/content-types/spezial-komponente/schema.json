@@ -4,7 +4,8 @@
   "info": {
     "singularName": "spezial-komponente",
     "pluralName": "spezial-komponentes",
-    "displayName": "Spezial Komponente"
+    "displayName": "Statische Komponente",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

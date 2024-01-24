@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "karriere_benefits",
+  "info": {
+    "singularName": "karriere-benefit",
+    "pluralName": "karriere-benefits",
+    "displayName": "Karriere Benefit"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titel": {
+      "type": "string"
+    },
+    "Beschreibung": {
+      "type": "text"
+    },
+    "Bild": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "KarriereAuflistungVorteile": {
+      "displayName": "Karriere Vorteile Auflistung",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.karriere-vorteile-auflistung"
+    }
+  }
+}
